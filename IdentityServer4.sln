@@ -3,20 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AuthServer", "IdentityServer.AuthServer\IdentityServer.AuthServer.csproj", "{4E4DFBA7-3C0A-4535-B2D8-B18C50699F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.AuthServer", "IdentityServer.AuthServer\IdentityServer.AuthServer.csproj", "{4E4DFBA7-3C0A-4535-B2D8-B18C50699F0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Client1", "IdentityServer.Client1\IdentityServer.Client1.csproj", "{030C3A89-5731-4062-B5DB-1163F6DAD970}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Client1", "IdentityServer.Client1\IdentityServer.Client1.csproj", "{030C3A89-5731-4062-B5DB-1163F6DAD970}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Client2", "IdentityServer.Client2\IdentityServer.Client2.csproj", "{7E25F1FA-E314-42C9-A076-2D683EA2B149}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Api1", "IdentityServer.Api1\IdentityServer.Api1.csproj", "{5D224DCE-C053-4D44-8202-EA6F76D54BBE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Api2", "IdentityServer.Api2\IdentityServer.Api2.csproj", "{B6A1E344-B48C-49F7-8650-8975811A65D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Client2", "IdentityServer.Client2\IdentityServer.Client2.csproj", "{7E25F1FA-E314-42C9-A076-2D683EA2B149}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7E781981-A20F-4013-BF94-064CB6E88835}"
 	ProjectSection(SolutionItems) = preProject
 		Ports.txt = Ports.txt
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.Api1", "IdentityServer.Api1\IdentityServer.Api1.csproj", "{1EBBD7D7-3598-492B-B47C-C2CCDB6B51AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Api2", "IdentityServer.Api2\IdentityServer.Api2.csproj", "{B98EC25E-0578-4E2F-9147-0BB1B9B9AA05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,14 +36,14 @@ Global
 		{7E25F1FA-E314-42C9-A076-2D683EA2B149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E25F1FA-E314-42C9-A076-2D683EA2B149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E25F1FA-E314-42C9-A076-2D683EA2B149}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D224DCE-C053-4D44-8202-EA6F76D54BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D224DCE-C053-4D44-8202-EA6F76D54BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D224DCE-C053-4D44-8202-EA6F76D54BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D224DCE-C053-4D44-8202-EA6F76D54BBE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6A1E344-B48C-49F7-8650-8975811A65D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6A1E344-B48C-49F7-8650-8975811A65D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6A1E344-B48C-49F7-8650-8975811A65D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6A1E344-B48C-49F7-8650-8975811A65D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EBBD7D7-3598-492B-B47C-C2CCDB6B51AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBBD7D7-3598-492B-B47C-C2CCDB6B51AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBBD7D7-3598-492B-B47C-C2CCDB6B51AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBBD7D7-3598-492B-B47C-C2CCDB6B51AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98EC25E-0578-4E2F-9147-0BB1B9B9AA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98EC25E-0578-4E2F-9147-0BB1B9B9AA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98EC25E-0578-4E2F-9147-0BB1B9B9AA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98EC25E-0578-4E2F-9147-0BB1B9B9AA05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
