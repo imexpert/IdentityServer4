@@ -18,6 +18,10 @@ namespace IdentityServer.AuthServer
                         "api1.read" ,
                         "api1.write" ,
                         "api1.update"
+                    },
+                    ApiSecrets = new[] 
+                    {
+                        new Secret("secretapi1".Sha256())
                     }
                 },
                 new ApiResource("resource_api2")
@@ -27,6 +31,10 @@ namespace IdentityServer.AuthServer
                         "api2.read" ,
                         "api2.write" ,
                         "api2.update"
+                    },
+                    ApiSecrets = new[]
+                    {
+                        new Secret("secretapi2".Sha256())
                     }
                 },
             };
@@ -55,7 +63,10 @@ namespace IdentityServer.AuthServer
                     ClientSecrets = new[] { new Secret("secret".Sha256()) },
                     ClientName = "Client 1 UI App",
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = new[]{ "api1.read" }
+                    AllowedScopes = new[]
+                    { 
+                        "api1.read" 
+                    }
                 },
                 new Client()
                 {
@@ -63,7 +74,13 @@ namespace IdentityServer.AuthServer
                     ClientSecrets = new[] { new Secret("secret".Sha256()) },
                     ClientName = "Client 2 UI App",
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = new[]{ "api1.read", "api1.update", "api2.write", "api2.update" }
+                    AllowedScopes = new[]
+                    { 
+                        "api1.read", 
+                        "api1.update", 
+                        "api2.write", 
+                        "api2.update" 
+                    }
                 }
             };
         }

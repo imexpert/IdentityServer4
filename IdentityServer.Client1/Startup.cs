@@ -22,6 +22,11 @@ namespace IdentityServer.Client1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc(s=>
+            {
+                s.EnableEndpointRouting = false;
+            });
+            services.AddControllers();
             services.AddRazorPages();
         }
 
@@ -46,6 +51,13 @@ namespace IdentityServer.Client1
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+            });
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Products}/{action=Index}");
             });
         }
     }
