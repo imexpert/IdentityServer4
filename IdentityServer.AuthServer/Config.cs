@@ -1,7 +1,9 @@
 ﻿using IdentityServer4.Models;
+using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace IdentityServer.AuthServer
@@ -11,15 +13,15 @@ namespace IdentityServer.AuthServer
         public static IEnumerable<ApiResource> GetApiResources()
         {
             return new List<ApiResource>() {
-                new ApiResource("resource_api1") 
-                { 
-                    Scopes = 
+                new ApiResource("resource_api1")
+                {
+                    Scopes =
                     {
                         "api1.read" ,
                         "api1.write" ,
                         "api1.update"
                     },
-                    ApiSecrets = new[] 
+                    ApiSecrets = new[]
                     {
                         new Secret("secretapi1".Sha256())
                     }
@@ -64,8 +66,8 @@ namespace IdentityServer.AuthServer
                     ClientName = "Client 1 UI App",
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     AllowedScopes = new[]
-                    { 
-                        "api1.read" 
+                    {
+                        "api1.read"
                     }
                 },
                 new Client()
@@ -75,13 +77,51 @@ namespace IdentityServer.AuthServer
                     ClientName = "Client 2 UI App",
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     AllowedScopes = new[]
-                    { 
-                        "api1.read", 
-                        "api1.update", 
-                        "api2.write", 
-                        "api2.update" 
+                    {
+                        "api1.read",
+                        "api1.update",
+                        "api2.write",
+                        "api2.update"
                     }
                 }
+            };
+        }
+
+        public static IEnumerable<IdentityResource> GetIdentityResources()
+        {
+            return new List<IdentityResource>()
+            {
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile(),
+            };
+        }
+
+        public static IEnumerable<TestUser> GetUsers()
+        {
+            return new List<TestUser>()
+            {
+                new TestUser()
+                {
+                    SubjectId = "1",
+                    Username="aosman",
+                    Password="password",
+                    Claims = new List<Claim>()
+                    {
+                        new Claim("given_name","Ali Osman"),
+                        new Claim("family_name","ÜNAL"),
+                    }
+                },
+                new TestUser()
+                {
+                    SubjectId = "2",
+                    Username="busra",
+                    Password="password",
+                    Claims = new List<Claim>()
+                    {
+                        new Claim("given_name","Büşra"),
+                        new Claim("family_name","ÜNAL"),
+                    }
+                },
             };
         }
     }

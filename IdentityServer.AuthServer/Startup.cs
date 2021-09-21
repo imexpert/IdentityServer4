@@ -26,7 +26,15 @@ namespace IdentityServer.AuthServer
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryApiScopes(Config.GetApiScopes())
                 .AddInMemoryClients(Config.GetClients())
+                .AddInMemoryIdentityResources(Config.GetIdentityResources())
+                .AddTestUsers(Config.GetUsers().ToList())
                 .AddDeveloperSigningCredential();
+
+            services.AddMvc(s =>
+            {
+                s.EnableEndpointRouting = false;
+            });
+            services.AddControllers();
 
             services.AddRazorPages();
         }
@@ -54,6 +62,13 @@ namespace IdentityServer.AuthServer
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+            });
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}");
             });
         }
     }
